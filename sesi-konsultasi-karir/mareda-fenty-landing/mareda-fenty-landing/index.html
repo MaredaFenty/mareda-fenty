@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sesi Konsultasi Karir — Mareda Fenty</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,300;1,400;1,500&family=Poppins:wght@300;400;500&family=Corinthia&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --moss:      #5E7A62;
+      --clay:      #C08A6A;
+      --parchment: #F3F0E8;
+      --dark:      #252C26;
+      --sage:      #8FA892;
+      --sand:      #DFD0BC;
+      --stone:     #E8E2D6;
+      --white:     #FAF8F4;
+      --ink:       #1A1F1B;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--parchment);
+      color: var(--dark);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 0 56px;
+      height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(243,240,232,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 0.5px solid var(--sand);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .nav-sig {
+      font-family: 'Corinthia', cursive;
+      font-size: 2rem;
+      color: var(--clay);
+      line-height: 1;
+    }
+
+    .nav-name {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1rem;
+      color: var(--dark);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .nav-tagline {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--sage);
+    }
+
+    .nav-cta {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--moss);
+      text-decoration: none;
+      padding: 10px 22px;
+      transition: background 0.25s;
+    }
+
+    .nav-cta:hover { background: var(--ink); }
+
+    /* ─── HERO ─── */
+    .hero {
+      padding: 144px 56px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .hero-label-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+
+    .hero-label-row .line {
+      width: 48px;
+      height: 0.5px;
+      background: var(--clay);
+    }
+
+    .hero-label-row span {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--clay);
+    }
+
+    .hero-headline {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(3.5rem, 7vw, 7.5rem);
+      line-height: 0.95;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      margin-bottom: 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-headline .indent { padding-left: clamp(80px, 12vw, 200px); }
+    .hero-headline .moss-word { color: var(--moss); }
+    .hero-headline .clay-word { color: var(--clay); }
+
+    .hero-body-row {
+      display: grid;
+      grid-template-columns: 1fr 480px;
+      gap: 60px;
+      align-items: end;
+      padding: 56px 0 0;
+      border-top: 0.5px solid var(--sand);
+      margin-top: 48px;
+    }
+
+    .hero-body-left p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 1.05rem;
+      color: var(--dark);
+      opacity: 0.7;
+      line-height: 1.85;
+      max-width: 460px;
+      letter-spacing: 0.01em;
+      margin-bottom: 40px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .btn-primary {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--moss);
+      text-decoration: none;
+      padding: 15px 36px;
+      transition: background 0.25s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover { background: var(--ink); }
+
+    .btn-ghost {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: var(--moss);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: gap 0.25s;
+    }
+
+    .btn-ghost:hover { gap: 14px; }
+    .btn-ghost::after { content: '→'; }
+
+    /* Photo card */
+    .hero-photo-card {
+      background: var(--stone);
+      position: relative;
+      aspect-ratio: 3/4;
+      max-height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+    }
+
+    .hero-photo-card img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center top;
+    }
+
+    /* ─── ABOUT PHOTO ─── */
+    .about-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center top;
+      margin-bottom: 32px;
+      display: block;
+      transform: scaleX(-1);
+    }
+
+    .photo-card-info {
+      position: relative;
+      z-index: 2;
+      background: rgba(37,44,38,0.85);
+      backdrop-filter: blur(4px);
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .photo-card-info .rate {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.5rem;
+      color: var(--parchment);
+    }
+
+    .photo-card-info .rate-label {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      color: var(--sage);
+      display: block;
+      margin-top: 2px;
+    }
+
+    .photo-card-info .book-link {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--clay);
+      text-decoration: none;
+      border-bottom: 0.5px solid var(--clay);
+      padding-bottom: 2px;
+    }
+
+    /* ─── NUMBERS / TRUST ─── */
+    .trust-strip {
+      padding: 0 56px;
+      margin-top: -1px;
+      background: var(--dark);
+    }
+
+    .trust-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-left: 0.5px solid rgba(143,168,146,0.15);
+    }
+
+    .trust-item {
+      padding: 40px 40px;
+      border-right: 0.5px solid rgba(143,168,146,0.15);
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .trust-num {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 2.8rem;
+      color: var(--clay);
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .trust-label strong {
+      display: block;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--parchment);
+      margin-bottom: 3px;
+    }
+
+    .trust-label span {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 300;
+      color: rgba(143,168,146,0.7);
+      line-height: 1.5;
+    }
+
+    /* ─── TENTANG ─── */
+    .about-section {
+      padding: 120px 56px;
+      background: var(--parchment);
+    }
+
+    .about-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 100px;
+      align-items: start;
+    }
+
+    .about-sidebar {
+      position: sticky;
+      top: 100px;
+    }
+
+    .about-sidebar .eyebrow {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--moss);
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .about-sidebar h2 {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 2.4rem;
+      line-height: 1.2;
+      color: var(--dark);
+      margin-bottom: 28px;
+    }
+
+    .about-sidebar .sig {
+      font-family: 'Corinthia', cursive;
+      font-size: 3.2rem;
+      color: var(--clay);
+      line-height: 1;
+      display: block;
+      margin-top: 24px;
+    }
+
+    .about-content {
+      padding-top: 8px;
+    }
+
+    .about-content p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+      color: var(--dark);
+      opacity: 0.72;
+      line-height: 1.95;
+      margin-bottom: 24px;
+      letter-spacing: 0.01em;
+    }
+
+    .about-pull {
+      border-top: 0.5px solid var(--sand);
+      border-bottom: 0.5px solid var(--sand);
+      padding: 32px 0;
+      margin: 36px 0;
+    }
+
+    .about-pull p {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.45rem;
+      color: var(--dark);
+      opacity: 1;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .about-pull p span { color: var(--clay); }
+
+    /* ─── PENDEKATAN ─── */
+    .approach-section {
+      padding: 0 56px 120px;
+      background: var(--parchment);
+    }
+
+    .approach-inner { max-width: 1200px; margin: 0 auto; }
+
+    .approach-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0 0 48px;
+      border-bottom: 0.5px solid var(--sand);
+      margin-bottom: 0;
+    }
+
+    .approach-header .eyebrow {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--moss);
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .approach-header h2 {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 2.4rem;
+      color: var(--dark);
+      line-height: 1.2;
+    }
+
+    .approach-header p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.9rem;
+      color: var(--dark);
+      opacity: 0.55;
+      max-width: 300px;
+      text-align: right;
+      line-height: 1.75;
+    }
+
+    .pillar-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .pillar {
+      padding: 48px 40px 48px 0;
+      border-right: 0.5px solid var(--sand);
+    }
+
+    .pillar:last-child { border-right: none; padding-right: 0; padding-left: 40px; }
+    .pillar:nth-child(2) { padding-left: 40px; }
+
+    .pillar-mark {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--moss);
+      background: rgba(94,122,98,0.1);
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 99px;
+      margin-bottom: 20px;
+    }
+
+    .pillar h3 {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.3rem;
+      color: var(--dark);
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+
+    .pillar p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.9rem;
+      color: var(--dark);
+      opacity: 0.62;
+      line-height: 1.85;
+      letter-spacing: 0.01em;
+    }
+
+    /* ─── YANG KITA BAHAS ─── */
+    .discuss-section {
+      padding: 120px 56px;
+      background: var(--parchment);
+    }
+
+    .discuss-inner { max-width: 1200px; margin: 0 auto; }
+
+    .discuss-header { margin-bottom: 64px; }
+
+    .discuss-eyebrow-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+
+    .discuss-eyebrow-row .line {
+      width: 48px;
+      height: 0.5px;
+      background: var(--sage);
+    }
+
+    .discuss-eyebrow-row span {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--sage);
+    }
+
+    .discuss-header h2 {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: var(--dark);
+      line-height: 1.25;
+      max-width: 760px;
+    }
+
+    .discuss-list { display: flex; flex-direction: column; }
+
+    .discuss-item {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 40px;
+      padding: 40px 0;
+      border-top: 0.5px solid var(--sand);
+      align-items: start;
+    }
+
+    .discuss-list .discuss-item:last-child { border-bottom: 0.5px solid var(--sand); }
+
+    .discuss-num {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 2.6rem;
+      color: var(--clay);
+      line-height: 1;
+    }
+
+    .discuss-item h3 {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.3rem;
+      color: var(--moss);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .discuss-item p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.95rem;
+      color: var(--dark);
+      opacity: 0.65;
+      line-height: 1.85;
+      letter-spacing: 0.01em;
+      max-width: 640px;
+    }
+
+    /* ─── UNTUK SIAPA ─── */
+    .who-section {
+      padding: 120px 56px;
+      background: var(--white);
+    }
+
+    .who-inner { max-width: 1200px; margin: 0 auto; }
+
+    .who-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: end;
+      padding-bottom: 60px;
+      border-bottom: 0.5px solid var(--sand);
+      margin-bottom: 60px;
+    }
+
+    .who-header .eyebrow {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--moss);
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .who-header h2 {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 2.4rem;
+      color: var(--dark);
+      line-height: 1.2;
+    }
+
+    .who-header p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.97rem;
+      color: var(--dark);
+      opacity: 0.62;
+      line-height: 1.85;
+      letter-spacing: 0.01em;
+      align-self: end;
+    }
+
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+
+    .who-card {
+      padding: 36px 36px 36px 0;
+      border-right: 0.5px solid var(--sand);
+    }
+
+    .who-card:last-child { border-right: none; padding-right: 0; padding-left: 36px; }
+    .who-card:nth-child(2) { padding-left: 36px; }
+
+    .who-card-num {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.8rem;
+      color: var(--sand);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .who-card h3 {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.15rem;
+      color: var(--dark);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .who-card p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.88rem;
+      color: var(--dark);
+      opacity: 0.62;
+      line-height: 1.8;
+      letter-spacing: 0.01em;
+    }
+
+    /* ─── TESTIMONIAL ─── */
+    .testimonial-section {
+      padding: 120px 56px;
+      background: var(--dark);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonial-section::before {
+      content: '"';
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 28rem;
+      color: rgba(255,255,255,0.025);
+      position: absolute;
+      top: -60px;
+      left: 40px;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .testimonial-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 72px;
+    }
+
+    .testimonial-header .eyebrow {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--sage);
+    }
+
+    .testimonial-header h2 {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 2.2rem;
+      color: var(--parchment);
+      line-height: 1.2;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+      background: rgba(143,168,146,0.15);
+    }
+
+    .testimonial-card {
+      background: rgba(255,255,255,0.04);
+      padding: 40px 36px;
+    }
+
+    .t-stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 20px;
+    }
+
+    .t-star {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--clay);
+    }
+
+    .t-quote {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.05rem;
+      color: var(--parchment);
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .t-author {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      padding-top: 20px;
+      border-top: 0.5px solid rgba(143,168,146,0.2);
+    }
+
+    .t-author strong {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--parchment);
+    }
+
+    .t-author span {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 300;
+      color: rgba(143,168,146,0.6);
+    }
+
+    /* ─── ALUR ─── */
+    .how-section {
+      padding: 120px 56px;
+      background: var(--parchment);
+    }
+
+    .how-inner { max-width: 1200px; margin: 0 auto; }
+
+    .how-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: end;
+      margin-bottom: 80px;
+    }
+
+    .how-header .eyebrow {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--moss);
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .how-header h2 {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 2.4rem;
+      color: var(--dark);
+      line-height: 1.2;
+    }
+
+    .how-header p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.95rem;
+      color: var(--dark);
+      opacity: 0.6;
+      line-height: 1.85;
+      align-self: end;
+    }
+
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--sand);
+      border: 0.5px solid var(--sand);
+    }
+
+    .how-card {
+      background: var(--dark);
+      padding: 44px 32px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .how-card-num {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 2.6rem;
+      color: var(--sage);
+      opacity: 0.45;
+      line-height: 1;
+      margin-bottom: 28px;
+    }
+
+    .how-card-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.74rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 14px;
+    }
+
+    .how-card-desc {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.85rem;
+      color: rgba(243,240,232,0.62);
+      line-height: 1.75;
+      letter-spacing: 0.01em;
+    }
+
+    .how-card-note {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 0.82rem;
+      color: var(--clay);
+      margin-top: 14px;
+    }
+
+    /* ─── BOOKING / DETAIL ─── */
+    .booking-section {
+      padding: 0 56px 0;
+      background: var(--parchment);
+    }
+
+    .booking-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 0.5px solid var(--sand);
+    }
+
+    .booking-left {
+      padding: 72px 60px;
+      border-right: 0.5px solid var(--sand);
+    }
+
+    .booking-left .eyebrow {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--moss);
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .booking-left h2 {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 2.2rem;
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 32px;
+    }
+
+    .booking-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 40px;
+    }
+
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 14px 0;
+      border-bottom: 0.5px solid var(--sand);
+    }
+
+    .meta-row:first-child { border-top: 0.5px solid var(--sand); }
+
+    .meta-key {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--moss);
+      letter-spacing: 0.04em;
+    }
+
+    .meta-val {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--dark);
+    }
+
+    .price-display {
+      margin-bottom: 36px;
+    }
+
+    .price-display .label {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sage);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .price-display .amount {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 3.2rem;
+      color: var(--dark);
+      line-height: 1;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .price-display .duration {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--sage);
+    }
+
+    .book-cta {
+      display: block;
+      width: 100%;
+      background: var(--moss);
+      color: var(--white);
+      text-align: center;
+      text-decoration: none;
+      padding: 16px 24px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      transition: background 0.25s;
+      margin-bottom: 12px;
+    }
+
+    .book-cta:hover { background: var(--ink); }
+
+    .book-note {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 300;
+      color: var(--sage);
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .booking-right {
+      padding: 72px 60px;
+      background: var(--stone);
+    }
+
+    .booking-right .eyebrow {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--moss);
+      display: block;
+      margin-bottom: 32px;
+    }
+
+    .benefit-list { display: flex; flex-direction: column; gap: 0; }
+
+    .benefit {
+      display: flex;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 0.5px solid var(--sand);
+      align-items: flex-start;
+    }
+
+    .benefit:last-child { border-bottom: none; }
+
+    .benefit-mark {
+      font-family: 'Corinthia', cursive;
+      font-size: 1.6rem;
+      color: var(--clay);
+      line-height: 1.2;
+      flex-shrink: 0;
+    }
+
+    .benefit strong {
+      display: block;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+
+    .benefit span {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.84rem;
+      font-weight: 300;
+      color: var(--dark);
+      opacity: 0.6;
+      line-height: 1.7;
+    }
+
+    /* ─── FAQ ─── */
+    .faq-section {
+      padding: 120px 56px;
+      background: var(--white);
+    }
+
+    .faq-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 100px;
+    }
+
+    .faq-left {
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+    }
+
+    .faq-left .eyebrow {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--moss);
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .faq-left h2 {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 2.2rem;
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .faq-left p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.9rem;
+      color: var(--dark);
+      opacity: 0.55;
+      line-height: 1.8;
+    }
+
+    details.faq-item { border-top: 0.5px solid var(--sand); }
+    details.faq-item:last-child { border-bottom: 0.5px solid var(--sand); }
+
+    details.faq-item summary {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: 24px 0;
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.05rem;
+      color: var(--dark);
+      gap: 16px;
+    }
+
+    details.faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-icon {
+      width: 24px;
+      height: 24px;
+      border: 0.5px solid var(--clay);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.9rem;
+      color: var(--clay);
+      font-style: normal;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      transition: all 0.25s;
+    }
+
+    details[open] .faq-icon {
+      background: var(--clay);
+      color: var(--white);
+      transform: rotate(45deg);
+    }
+
+    details.faq-item p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.93rem;
+      color: var(--dark);
+      opacity: 0.65;
+      line-height: 1.85;
+      padding-bottom: 24px;
+      padding-right: 40px;
+    }
+
+    /* ─── FOOTER CTA ─── */
+    .footer-cta {
+      background: var(--parchment);
+      padding: 140px 56px 100px;
+      text-align: center;
+      border-top: 0.5px solid var(--sand);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-cta-bg {
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 20rem;
+      color: rgba(94,122,98,0.04);
+      white-space: nowrap;
+      pointer-events: none;
+      line-height: 1;
+    }
+
+    .footer-cta .eyebrow {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--moss);
+      display: block;
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .footer-cta h2 {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(2.8rem, 5vw, 5.5rem);
+      color: var(--dark);
+      line-height: 1.1;
+      margin-bottom: 28px;
+      position: relative;
+      letter-spacing: -0.01em;
+    }
+
+    .footer-cta h2 .clay { color: var(--clay); }
+
+    .footer-cta p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+      color: var(--dark);
+      opacity: 0.6;
+      max-width: 400px;
+      margin: 0 auto 48px;
+      line-height: 1.85;
+      position: relative;
+    }
+
+    .footer-cta .btn-primary { position: relative; }
+
+    .footer-cta-sig {
+      font-family: 'Corinthia', cursive;
+      font-size: 5rem;
+      color: var(--clay);
+      opacity: 0.4;
+      margin-top: 60px;
+      display: block;
+      position: relative;
+    }
+
+    /* ─── FOOTER BOTTOM ─── */
+    .footer-bottom {
+      background: var(--dark);
+      padding: 28px 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-bottom p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.76rem;
+      color: rgba(243,240,232,0.45);
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .footer-socials a {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(243,240,232,0.45);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-socials a:hover { color: var(--clay); }
+
+    .footer-socials .sep { color: rgba(143,168,146,0.25); font-size: 0.7rem; }
+
+    .footer-bottom .email a {
+      color: rgba(243,240,232,0.45);
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 300;
+      transition: color 0.2s;
+    }
+
+    .footer-bottom .email a:hover { color: var(--parchment); }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 1000px) {
+      nav { padding: 0 24px; }
+      .nav-tagline { display: none; }
+
+      .hero { padding: 120px 24px 0; }
+      .hero-body-row { grid-template-columns: 1fr; }
+      .hero-photo-card { max-height: 340px; aspect-ratio: 4/3; }
+
+      .trust-strip { padding: 0 24px; }
+      .trust-inner { grid-template-columns: 1fr; border-left: none; }
+      .trust-item { border-right: none; border-bottom: 0.5px solid rgba(143,168,146,0.15); }
+      .trust-item:last-child { border-bottom: none; }
+
+      .about-section,
+      .approach-section,
+      .how-section,
+      .booking-section,
+      .faq-section,
+      .footer-cta { padding-left: 24px; padding-right: 24px; }
+
+      .about-inner { grid-template-columns: 1fr; gap: 40px; }
+      .about-sidebar { position: static; }
+
+      .approach-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .approach-header p { text-align: left; }
+      .pillar-row { grid-template-columns: 1fr; }
+      .pillar, .pillar:nth-child(2), .pillar:last-child {
+        padding: 32px 0; border-right: none;
+        border-bottom: 0.5px solid var(--sand);
+      }
+
+      .discuss-section { padding: 80px 24px; }
+      .discuss-item { grid-template-columns: 56px 1fr; gap: 20px; padding: 28px 0; }
+      .discuss-num { font-size: 1.8rem; }
+
+      .who-section { padding: 80px 24px; }
+      .who-header { grid-template-columns: 1fr; gap: 20px; }
+      .who-grid { grid-template-columns: 1fr; }
+      .who-card, .who-card:nth-child(2), .who-card:last-child {
+        padding: 28px 0; border-right: none;
+        border-bottom: 0.5px solid var(--sand);
+      }
+
+      .testimonial-section { padding: 80px 24px; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .testimonial-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+
+      .how-header { grid-template-columns: 1fr; gap: 20px; }
+      .how-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .booking-inner { grid-template-columns: 1fr; border: none; }
+      .booking-left { padding: 48px 24px; border-right: none; border-bottom: 0.5px solid var(--sand); }
+      .booking-right { padding: 48px 24px; }
+
+      .faq-inner { grid-template-columns: 1fr; gap: 40px; }
+      .faq-left { position: static; }
+
+      .footer-cta { padding: 80px 24px 60px; }
+      .footer-cta h2 { font-size: 2.8rem; }
+
+      .footer-bottom { flex-direction: column; text-align: center; padding: 24px; gap: 16px; }
+      .footer-socials { justify-content: center; }
+    }
+
+    @media (max-width: 640px) {
+      .how-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-brand">
+      <span class="nav-sig">M</span>
+      <span class="nav-name">Mareda Fenty</span>
+    </div>
+    <div class="nav-right">
+      <span class="nav-tagline">Career Mentor · Mindful Berkarir</span>
+      <a href="https://calendly.com/hello-maredafenty/sesi-konsultasi-karir" class="nav-cta" target="_blank">Pilih Jadwal</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-label-row">
+        <div class="line"></div>
+        <span>Sesi Konsultasi Karir · One-on-One</span>
+      </div>
+      <h1 class="hero-headline">
+        Karir yang<br>
+        <span class="indent">benar-benar</span><br>
+        <span class="moss-word">milikmu.</span>
+      </h1>
+      <div class="hero-body-row">
+        <div class="hero-body-left">
+          <p>Bukan sekadar tips dan template. Sesi satu-satu yang mendalam dan personal — membantu kamu menemukan arah karir yang selaras dengan dirimu, bukan sekadar fit ke pasar.</p>
+          <div class="hero-cta-group">
+            <a href="https://calendly.com/hello-maredafenty/sesi-konsultasi-karir" class="btn-primary" target="_blank">Pilih Jadwal Sesi</a>
+            <a href="#booking" class="btn-ghost">Lihat detail sesi</a>
+          </div>
+        </div>
+        <div class="hero-photo-card">
+          <img src="assets/foto-mareda-hero.jpg" alt="Mareda Fenty, Career Mentor — Mindful Berkarir" loading="lazy">
+          <div class="photo-card-info">
+            <div>
+              <span class="rate">Rp 100.000</span>
+              <span class="rate-label">per 60 menit</span>
+            </div>
+            <a href="https://calendly.com/hello-maredafenty/sesi-konsultasi-karir" class="book-link" target="_blank">Book sekarang →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <div class="trust-strip">
+    <div class="trust-inner">
+      <div class="trust-item">
+        <span class="trust-num">100+</span>
+        <div class="trust-label">
+          <strong>Klien telah terbantu</strong>
+          <span>Fresh graduate & profesional yang telah menemukan arahnya</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-num">4+</span>
+        <div class="trust-label">
+          <strong>Tahun pengalaman</strong>
+          <span>Praktisi HR & psikologi yang aktif di bidangnya</span>
+        </div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-num">60'</span>
+        <div class="trust-label">
+          <strong>Satu sesi, satu fokus</strong>
+          <span>Percakapan mendalam yang dirancang untuk membuka arah</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TENTANG -->
+  <section class="about-section">
+    <div class="about-inner">
+      <div class="about-sidebar">
+        <img src="assets/foto-mareda-about.png" alt="Mareda Fenty" class="about-photo" loading="lazy">
+        <span class="eyebrow">Tentang Mareda</span>
+        <h2>Lebih dari sekadar konsultasi karir biasa</h2>
+        <span class="sig">Mareda</span>
+      </div>
+      <div class="about-content">
+        <p>Background saya di psikologi dan dunia HR membuat saya bisa melihat masalah karir dari dua sisi sekaligus — sebagai seseorang yang paham cara kerja rekrutmen, dan sebagai seseorang yang benar-benar peduli pada kondisi dalam diri kliennya.</p>
+        <div class="about-pull">
+          <p>"Saya tidak mengajak kamu untuk <span>fit ke pasar.</span> Saya mengajak kamu menemukan karir yang benar-benar fit dengan dirimu sendiri."</p>
+        </div>
+        <p>Yang membedakan saya bukan hanya pengalaman. Tapi pendekatan: saya percaya karir yang baik bukan soal seberapa bagus CV kamu di mata pasar — tapi seberapa selaras ia dengan siapa kamu sebenarnya.</p>
+        <p>Di setiap sesi, kita tidak hanya bicara strategi. Kita bicara tentang apa yang sebenarnya sedang kamu rasakan, dan dari sana — kita cari jalan yang paling tepat untuk kamu. Hadir sepenuhnya lebih penting dari hafalan jawaban.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PENDEKATAN -->
+  <section class="approach-section">
+    <div class="approach-inner">
+      <div class="approach-header">
+        <div>
+          <span class="eyebrow">Pendekatan</span>
+          <h2>Cara kerja yang berbeda</h2>
+        </div>
+        <p>Tidak ikut tren. Tidak hanya teknikal. Mendalam dan personal di setiap sesi.</p>
+      </div>
+      <div class="pillar-row">
+        <div class="pillar">
+          <span class="pillar-mark">01</span>
+          <h3>Mendalam & Personal</h3>
+          <p>Setiap orang membawa cerita yang berbeda. Sesi kita bukan checklist — tapi percakapan yang sungguh-sungguh, disesuaikan dengan kondisimu saat ini.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-mark">02</span>
+          <h3>Mindful Berkarir</h3>
+          <p>Bukan hanya skill teknikal. Saya mengajak kamu hadir penuh — sadar atas pilihan, tidak overthinking, dan tidak mensabotase diri di tengah jalan.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-mark">03</span>
+          <h3>Berbasis Pengalaman</h3>
+          <p>Latar belakang psikologi dan HR bukan cuma teori — ini yang membuat saya bisa membaca situasimu lebih dalam dan memberikan perspektif yang benar-benar relevan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- YANG KITA BAHAS -->
+  <section class="discuss-section">
+    <div class="discuss-inner">
+      <div class="discuss-header">
+        <div class="discuss-eyebrow-row">
+          <div class="line"></div>
+          <span>Yang Kita Bahas</span>
+        </div>
+        <h2>Satu jam yang tidak terasa seperti konsultasi biasa</h2>
+      </div>
+      <div class="discuss-list">
+        <div class="discuss-item">
+          <span class="discuss-num">01</span>
+          <div>
+            <h3>Situasimu sekarang</h3>
+            <p>Kita mulai dari posisimu saat ini — bukan dari template. Apa yang sudah berjalan, apa yang terasa stuck, dan apa yang belum pernah kamu ungkapkan ke siapapun.</p>
+          </div>
+        </div>
+        <div class="discuss-item">
+          <span class="discuss-num">02</span>
+          <div>
+            <h3>Arah yang benar-benar milikmu</h3>
+            <p>Bukan "kamu harus apply ke mana." Tapi apa yang sebenarnya kamu cari — dan apakah pilihan yang ada sekarang sudah sejalan dengan itu.</p>
+          </div>
+        </div>
+        <div class="discuss-item">
+          <span class="discuss-num">03</span>
+          <div>
+            <h3>Yang menghalangi tanpa disadari</h3>
+            <p>CV bagus tapi nggak dapat-dapat? Interview lancar tapi hasilnya beda? Kadang yang menghalangi bukan yang terlihat di permukaan.</p>
+          </div>
+        </div>
+        <div class="discuss-item">
+          <span class="discuss-num">04</span>
+          <div>
+            <h3>Langkah nyata setelah sesi</h3>
+            <p>Kamu keluar dengan lebih dari insight — ada satu langkah konkret yang bisa langsung dikerjakan, sesuai dengan kondisi dan energi yang kamu punya.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UNTUK SIAPA -->
+  <section class="who-section">
+    <div class="who-inner">
+      <div class="who-header">
+        <div>
+          <span class="eyebrow">Untuk Siapa</span>
+          <h2>Sesi ini cocok untuk kamu yang…</h2>
+        </div>
+        <p>Tidak harus punya masalah besar untuk datang. Kadang cukup merasa tidak yakin — dan itu sudah alasan yang cukup untuk memulai percakapan.</p>
+      </div>
+      <div class="who-grid">
+        <div class="who-card">
+          <div class="who-card-num">01</div>
+          <h3>Fresh Graduate</h3>
+          <p>Baru lulus, bingung harus mulai dari mana — dan tidak ingin cuma apply random tanpa arah yang jelas.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-card-num">02</div>
+          <h3>Ingin Pivot Karir</h3>
+          <p>Sudah punya pengalaman tapi ingin berani pindah jalur. Tahu ada sesuatu yang tidak selaras, tapi belum tahu langkah pertamanya.</p>
+        </div>
+        <div class="who-card">
+          <div class="who-card-num">03</div>
+          <h3>Ingin Naik Level</h3>
+          <p>Nyaman di tempat sekarang tapi merasa stuck. Ingin tahu apa yang perlu dibenahi untuk benar-benar berkembang.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <!--
+    CATATAN: 3 testimoni di bawah ini masih CONTOH/ILUSTRASI (Rizky A., Dinda P., Hana W.)
+    Ganti dengan testimoni asli dari klien begitu sudah terkumpul lewat flow follow-up
+    ("Bagaimana sesi kemarin?"). Pertahankan format: bintang, kutipan, nama + konteks singkat.
+  -->
+  <section class="testimonial-section">
+    <div class="testimonial-inner">
+      <div class="testimonial-header">
+        <span class="eyebrow">Kata Mereka</span>
+        <h2>Yang dirasakan<br>setelah sesi</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="t-stars">
+            <div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div>
+          </div>
+          <p class="t-quote">"Saya pikir masalahnya ada di CV. Ternyata ada hal lain yang selama ini saya abaikan. Satu sesi sama Mareda membuka perspektif yang tidak saya bayangkan sebelumnya."</p>
+          <div class="t-author">
+            <strong>Rizky A.</strong>
+            <span>Fresh Graduate · Teknik Industri</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="t-stars">
+            <div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div>
+          </div>
+          <p class="t-quote">"Mbak Mareda tidak hanya kasih tips karir biasa. Dia bantu saya lihat kenapa saya terus-terusan overthinking setelah interview — dan itu yang paling saya butuhkan."</p>
+          <div class="t-author">
+            <strong>Dinda P.</strong>
+            <span>Marketing · 3 tahun pengalaman</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="t-stars">
+            <div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div>
+          </div>
+          <p class="t-quote">"Saya mau pivot tapi takut. Setelah ngobrol sama Mareda, saya jadi punya gambaran yang jauh lebih jelas — dan yang penting, lebih berani untuk mulai."</p>
+          <div class="t-author">
+            <strong>Hana W.</strong>
+            <span>Finance · Pivot ke HR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALUR BOOKING -->
+  <section class="how-section">
+    <div class="how-inner">
+      <div class="how-header">
+        <div>
+          <span class="eyebrow">Alur Booking</span>
+          <h2>Cara mulai sesi bersama saya</h2>
+        </div>
+        <p>Sederhana. Pilih jadwal dulu — pembayaran setelah dapat email konfirmasi. Slot terkonfirmasi setelah pembayaran masuk.</p>
+      </div>
+      <div class="how-grid">
+        <div class="how-card">
+          <span class="how-card-num">01</span>
+          <span class="how-card-title">Pilih Jadwal</span>
+          <p class="how-card-desc">Klik tombol booking dan pilih slot yang tersedia sesuai waktu kamu.</p>
+        </div>
+        <div class="how-card">
+          <span class="how-card-num">02</span>
+          <span class="how-card-title">Terima Email</span>
+          <p class="how-card-desc">Kamu akan menerima email berisi link pembayaran dan batas waktu konfirmasi.</p>
+          <p class="how-card-note">Batas bayar: 1 jam setelah booking</p>
+        </div>
+        <div class="how-card">
+          <span class="how-card-num">03</span>
+          <span class="how-card-title">Selesaikan Pembayaran</span>
+          <p class="how-card-desc">Bayar sesuai instruksi di email. Slot kamu terkonfirmasi setelah pembayaran masuk.</p>
+        </div>
+        <div class="how-card">
+          <span class="how-card-num">04</span>
+          <span class="how-card-title">Sesi Dimulai</span>
+          <p class="how-card-desc">Detail sesi dikirim via email. Kita ketemu di Zoom atau Google Meet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAIL SESI / BOOKING -->
+  <section class="booking-section" id="booking">
+    <div class="booking-inner">
+      <div class="booking-left">
+        <span class="eyebrow">Detail Sesi</span>
+        <h2>Satu sesi,<br>satu fokus.</h2>
+        <div class="booking-meta">
+          <div class="meta-row">
+            <span class="meta-key">Durasi</span>
+            <span class="meta-val">60 menit</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-key">Format</span>
+            <span class="meta-val">Video call · Zoom / Google Meet</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-key">Bahasa</span>
+            <span class="meta-val">Bahasa Indonesia</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-key">Konfirmasi</span>
+            <span class="meta-val">Otomatis setelah pembayaran</span>
+          </div>
+        </div>
+        <div class="price-display">
+          <span class="label">Investasi</span>
+          <span class="amount">Rp 100.000</span>
+          <span class="duration">per sesi · 60 menit</span>
+        </div>
+        <a href="https://calendly.com/hello-maredafenty/sesi-konsultasi-karir" class="book-cta" target="_blank">Pilih Jadwal Sekarang →</a>
+        <p class="book-note">Pilih slot dulu — bayar setelah dapat email konfirmasi</p>
+      </div>
+      <div class="booking-right">
+        <span class="eyebrow">Yang kamu dapatkan</span>
+        <div class="benefit-list">
+          <div class="benefit">
+            <span class="benefit-mark">✦</span>
+            <div>
+              <strong>Sesi 60 menit penuh</strong>
+              <span>Percakapan mendalam, tidak terburu-buru, fokus sepenuhnya pada situasimu saat ini.</span>
+            </div>
+          </div>
+          <div class="benefit">
+            <span class="benefit-mark">✦</span>
+            <div>
+              <strong>Perspektif yang langsung bisa dipakai</strong>
+              <span>Bukan teori umum — tapi insight konkret yang relevan untuk kondisimu hari ini.</span>
+            </div>
+          </div>
+          <div class="benefit">
+            <span class="benefit-mark">✦</span>
+            <div>
+              <strong>Pendekatan yang menyeluruh</strong>
+              <span>Bukan cuma CV dan interview — kita bicara tentang apa yang ada di baliknya juga.</span>
+            </div>
+          </div>
+          <div class="benefit">
+            <span class="benefit-mark">✦</span>
+            <div>
+              <strong>Rekap setelah sesi</strong>
+              <span>Poin penting dan langkah selanjutnya dikirimkan setelah sesi selesai.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="faq-inner">
+      <div class="faq-left">
+        <span class="eyebrow">Pertanyaan Umum</span>
+        <h2>Yang sering ditanyakan</h2>
+        <p>Tidak menemukan jawabanmu di sini? Kirim email ke hello.maredafenty@gmail.com.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Apakah ini sesi coaching atau konseling? <span class="faq-icon">+</span></summary>
+          <p>Ini sesi konsultasi karir — lebih seperti ngobrol mendalam bersama seseorang yang punya latar belakang psikologi dan HR. Bukan terapi, tapi jauh lebih dalam dari sekadar tanya jawab biasa.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Saya belum punya masalah serius. Apakah relevan? <span class="faq-icon">+</span></summary>
+          <p>Ya. Banyak klien datang bukan karena krisis, tapi karena ingin lebih jelas dengan arahnya. Merasa "oke-oke saja tapi tidak berkembang" itu sinyal yang valid untuk dieksplorasi bersama.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Bagaimana kalau jadwal saya tidak bisa? <span class="faq-icon">+</span></summary>
+          <p>Kamu bisa reschedule selama mengonfirmasi minimal 24 jam sebelum sesi. Hubungi saya di hello.maredafenty@gmail.com.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Apa yang perlu saya siapkan sebelum sesi? <span class="faq-icon">+</span></summary>
+          <p>Tidak banyak. Cukup pikirkan satu atau dua hal yang paling ingin kamu diskusikan. Kita akan mulai dari sana — sisanya akan mengalir sendiri.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Apakah ada sesi lanjutan? <span class="faq-icon">+</span></summary>
+          <p>Bisa, tergantung kebutuhanmu. Setelah sesi pertama kita bisa diskusikan bersama apakah perlu lanjutan atau tidak.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER CTA -->
+  <section class="footer-cta">
+    <span class="footer-cta-bg">Mareda</span>
+    <span class="eyebrow">Mulai Sekarang</span>
+    <h2>Karir yang selaras<br>menunggu kamu <span class="clay">kenali.</span></h2>
+    <p>Satu percakapan bisa membuka perspektif yang selama ini belum pernah kamu lihat sendiri.</p>
+    <a href="https://calendly.com/hello-maredafenty/sesi-konsultasi-karir" class="btn-primary" target="_blank">Pilih Jadwal Sesi</a>
+    <span class="footer-cta-sig">Mareda</span>
+  </section>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2026 Mareda Fenty · Career Mentor</p>
+    <!-- CATATAN: cek dulu handle TikTok & YouTube Mareda sebelum publish, IG @maredafenty sudah terkonfirmasi -->
+    <div class="footer-socials">
+      <a href="https://instagram.com/maredafenty" target="_blank">Instagram</a>
+      <span class="sep">/</span>
+      <a href="https://tiktok.com/@maredafenty" target="_blank">TikTok</a>
+      <span class="sep">/</span>
+      <a href="https://youtube.com/@maredafenty" target="_blank">YouTube</a>
+    </div>
+    <p class="email"><a href="mailto:hello.maredafenty@gmail.com">hello.maredafenty@gmail.com</a></p>
+  </div>
+
+</body>
+</html>
