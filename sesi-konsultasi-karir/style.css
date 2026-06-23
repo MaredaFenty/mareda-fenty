@@ -738,6 +738,98 @@
       background: rgba(143,168,146,0.15);
     }
 
+   .testimonials-carousel {
+      width: 100%;
+   }
+
+   .tc-track {
+     display: flex;
+     transition: transform 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+     will-change: transform;
+   }
+
+   /* ≤ 3 kartu: tampil grid biasa seperti semula */
+   .tc-track.tc-static {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 1.5px;
+     background: rgba(143,168,146,0.15);
+   }
+
+   /* 4+ kartu: carousel aktif */
+   .tc-track.tc-live {
+     flex-wrap: nowrap;
+     gap: 1.5px;
+     overflow: hidden;
+   }
+
+   .tc-track.tc-live .testimonial-card {
+     flex: 0 0 calc(33.333% - 1px);
+     min-width: 0;
+   }
+
+   /* Navigasi */
+   .tc-nav {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 16px;
+     margin-top: 40px;
+   }
+
+   .tc-btn {
+     width: 36px;
+     height: 36px;
+     border-radius: 50%;
+     border: 0.5px solid var(--sand);
+     background: transparent;
+     color: var(--sage);
+     font-size: 15px;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: all 0.18s;
+     font-family: 'Poppins', sans-serif;
+   }
+
+   .tc-btn:hover {
+     background: var(--moss);
+     border-color: var(--moss);
+     color: var(--parchment);
+   }
+
+   .tc-dots {
+     display: flex;
+     gap: 6px;
+     align-items: center;
+   }
+
+   .tc-dot {
+     width: 5px;
+     height: 5px;
+     border-radius: 50%;
+     background: rgba(143,168,146,0.25);
+     cursor: pointer;
+     transition: all 0.2s;
+   }
+
+   .tc-dot.active {
+     background: var(--clay);
+     width: 16px;
+     border-radius: 3px;
+   }
+
+   /* Mobile: 1 kartu per layar saat carousel aktif */
+   @media (max-width: 1000px) {
+     .tc-track.tc-static {
+       grid-template-columns: 1fr;
+     }
+     .tc-track.tc-live .testimonial-card {
+       flex: 0 0 100%;
+     }
+   }
+
     .testimonial-card {
       background: rgba(255,255,255,0.04);
       padding: 40px 36px;
