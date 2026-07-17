@@ -1464,3 +1464,99 @@
     @media (max-width: 640px) {
       .how-grid { grid-template-columns: 1fr; }
     }
+
+/* 1. Warna seleksi teks — detail kecil yang terasa intensional */
+::selection {
+    background: var(--moss);
+    color: var(--parchment);
+}
+
+/* 2. Scroll reveal (class ditambahkan oleh JavaScript;
+      tanpa JS halaman tampil normal) */
+.reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* 3. Tombol: angkat halus saat hover, selain ganti warna */
+.btn-primary,
+.nav-cta,
+.book-cta {
+    transition: background 0.25s, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary:hover,
+.nav-cta:hover,
+.book-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(37, 44, 38, 0.14);
+}
+
+/* 4. Foto hero: zoom sangat lambat saat hover (luxury slow zoom) */
+.hero-photo-card img {
+    transition: transform 1.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.hero-photo-card:hover img {
+    transform: scale(1.04);
+}
+
+/* 5. Kartu & list: aksen warna hidup saat disentuh */
+.who-card .who-card-num {
+    transition: color 0.35s ease;
+}
+
+.who-card:hover .who-card-num {
+    color: var(--clay);
+}
+
+.pillar .pillar-mark {
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.pillar:hover .pillar-mark {
+    background: var(--moss);
+    color: var(--parchment);
+}
+
+.discuss-item .discuss-num {
+    transition: color 0.35s ease;
+}
+
+.discuss-item:hover .discuss-num {
+    color: var(--moss);
+}
+
+.testimonial-card {
+    transition: background 0.35s ease;
+}
+
+.testimonial-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+}
+
+details.faq-item summary {
+    transition: color 0.25s ease;
+}
+
+details.faq-item summary:hover {
+    color: var(--clay);
+}
+
+
