@@ -11,7 +11,6 @@
   <link rel="apple-touch-icon" href="/mareda-fenty/images/apple-touch-icon.png">
 </head>
 <body>
-
   <!-- NAV -->
   <nav>
     <div class="nav-brand">
@@ -23,7 +22,6 @@
       <a href="https://calendly.com/hello-maredafenty/sesi-konsultasi-karir" class="nav-cta" target="_blank">Pilih Jadwal</a>
     </div>
   </nav>
-
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
@@ -32,9 +30,9 @@
         <span>Sesi Konsultasi Karir · One-on-One</span>
       </div>
       <h1 class="hero-headline">
-        Karir yang<br>
-        <span class="indent">benar-benar</span><br>
-        <span class="moss-word">milikmu.</span>
+        <span class="hl-line">Karir yang</span>
+        <span class="hl-line indent">benar-benar</span>
+        <span class="hl-line moss-word">milikmu.</span>
       </h1>
       <div class="hero-body-row">
         <div class="hero-body-left">
@@ -57,7 +55,6 @@
       </div>
     </div>
   </section>
-
   <!-- TRUST STRIP -->
   <div class="trust-strip">
     <div class="trust-inner">
@@ -84,7 +81,6 @@
       </div>
     </div>
   </div>
-
   <!-- TENTANG -->
   <section class="about-section">
     <div class="about-inner">
@@ -104,7 +100,6 @@
       </div>
     </div>
   </section>
-
   <!-- PENDEKATAN -->
   <section class="approach-section">
     <div class="approach-inner">
@@ -134,7 +129,6 @@
       </div>
     </div>
   </section>
-
   <!-- YANG KITA BAHAS -->
   <section class="discuss-section">
     <div class="discuss-inner">
@@ -177,7 +171,6 @@
       </div>
     </div>
   </section>
-
   <!-- UNTUK SIAPA -->
   <section class="who-section">
     <div class="who-inner">
@@ -207,7 +200,6 @@
       </div>
     </div>
   </section>
-
   <!-- TESTIMONIAL -->
   <!--
     ("Bagaimana sesi kemarin?"). Pertahankan format: bintang, kutipan, nama + konteks singkat.
@@ -222,7 +214,6 @@
       </div>
         <div class="testimonials-carousel">
           <div class="tc-track" id="tc-track">
-
             <!-- TESTIMONI 1 — asli -->
             <div class="testimonial-card">
               <div class="t-stars">
@@ -234,7 +225,6 @@
                 <span>Job Seeker · Baru diterima kerja</span>
               </div>
             </div>
-
             <!-- TESTIMONI 2 — asli -->
             <div class="testimonial-card">
               <div class="t-stars">
@@ -246,7 +236,6 @@
                 <span>Profesional · Proses mengenal diri</span>
               </div>
             </div>
-
             <!-- TESTIMONI 3 — asli -->
             <div class="testimonial-card">
               <div class="t-stars">
@@ -261,7 +250,6 @@
    <!--
     ═══════════════════════════════════════════════
     CARA TAMBAH TESTIMONI BARU — duplikat blok ini:
-
     <div class="testimonial-card">
       <div class="t-stars">
         <div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div><div class="t-star"></div>
@@ -272,27 +260,23 @@
         <span>Profil singkat · Hasil yang dicapai</span>
       </div>
     </div>
-
     Kalau total kartu masih 3 atau kurang → carousel
     tidak aktif, tampil grid biasa seperti semula.
     Kalau 4+ → carousel otomatis aktif.
     ═══════════════════════════════════════════════
     -->
     </div><!-- /tc-track -->
-
       <!-- Tombol & dots — hanya muncul kalau kartu > 3 -->
       <div class="tc-nav" id="tc-nav" style="display:none">
         <button class="tc-btn" id="tc-prev" aria-label="Sebelumnya">&#8592;</button>
         <div class="tc-dots" id="tc-dots"></div>
         <button class="tc-btn" id="tc-next" aria-label="Berikutnya">&#8594;</button>
       </div>
-
     </div><!-- /testimonials-carousel -->
-            
+
       </div>
     </div>
   </section>
-
   <!-- ALUR BOOKING -->
   <section class="how-section">
     <div class="how-inner">
@@ -328,7 +312,6 @@
       </div>
     </div>
   </section>
-
   <!-- DETAIL SESI / BOOKING -->
   <section class="booking-section" id="booking">
     <div class="booking-inner">
@@ -396,7 +379,6 @@
       </div>
     </div>
   </section>
-
   <!-- FAQ -->
   <section class="faq-section">
     <div class="faq-inner">
@@ -429,7 +411,6 @@
       </div>
     </div>
   </section>
-
   <!-- FOOTER CTA -->
   <section class="footer-cta">
     <span class="footer-cta-bg">Mareda</span>
@@ -439,7 +420,6 @@
     <a href="https://calendly.com/hello-maredafenty/sesi-konsultasi-karir" class="btn-primary" target="_blank">Pilih Jadwal Sesi</a>
     <span class="footer-cta-sig">Mareda</span>
   </section>
-
   <!-- FOOTER BOTTOM -->
   <div class="footer-bottom">
     <p>© 2026 Mareda Fenty · Career Mentor</p>
@@ -452,7 +432,6 @@
     </div>
     <p class="email"><a href="mailto:hello.maredafenty@gmail.com">hello.maredafenty@gmail.com</a></p>
   </div>
-
 <script>
 (function () {
   var track   = document.getElementById('tc-track');
@@ -461,24 +440,19 @@
   var btnPrev = document.getElementById('tc-prev');
   var btnNext = document.getElementById('tc-next');
   if (!track) return;
-
   var cards   = track.querySelectorAll('.testimonial-card');
   var total   = cards.length;
-
   /* 3 kartu atau kurang: grid biasa, tidak aktifkan carousel */
   if (total <= 3) {
     track.classList.add('tc-static');
     return;
   }
-
   /* 4+ kartu: aktifkan carousel */
   var visible = window.innerWidth <= 1000 ? 1 : 3;
   var maxStep = total - visible;
   var cur     = 0;
-
   track.classList.add('tc-live');
   nav.style.display = 'flex';
-
   for (var i = 0; i <= maxStep; i++) {
     var d = document.createElement('div');
     d.className = 'tc-dot' + (i === 0 ? ' active' : '');
@@ -486,13 +460,10 @@
     d.addEventListener('click', function () { goTo(+this.getAttribute('data-i')); });
     dotsEl.appendChild(d);
   }
-
   function gap() { return 1.5; }
-
   function cardWidth() {
     return cards[0] ? cards[0].offsetWidth + gap() : 0;
   }
-
   function goTo(n) {
     cur = Math.max(0, Math.min(n, maxStep));
     track.style.transform = 'translateX(-' + (cardWidth() * cur) + 'px)';
@@ -500,10 +471,8 @@
       d.classList.toggle('active', i === cur);
     });
   }
-
   btnPrev.addEventListener('click', function () { goTo(cur - 1); });
   btnNext.addEventListener('click', function () { goTo(cur + 1); });
-
   /* Swipe touch */
   var sx = 0;
   track.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
@@ -511,7 +480,6 @@
     var diff = sx - e.changedTouches[0].clientX;
     if (Math.abs(diff) > 40) goTo(diff > 0 ? cur + 1 : cur - 1);
   }, { passive: true });
-
   window.addEventListener('resize', function () {
     visible = window.innerWidth <= 1000 ? 1 : 3;
     maxStep = total - visible;
@@ -520,14 +488,11 @@
   });
 })();
 </script>
-
   <script>
   (function () {
   'use strict';
-
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   if (!('IntersectionObserver' in window)) return;
-
   /* ── 1. SCROLL REVEAL ── */
   var singles = document.querySelectorAll(
     '.hero-inner, .about-sidebar, .about-content, .approach-header, ' +
@@ -539,9 +504,7 @@
     '.trust-item, .pillar, .discuss-item, .who-card, ' +
     '.testimonial-card, .how-card, .benefit'
   );
-
   singles.forEach(function (el) { el.classList.add('reveal'); });
-
   var groupCount = {};
   staggered.forEach(function (el) {
     el.classList.add('reveal');
@@ -551,7 +514,6 @@
     groupCount[key] = (groupCount[key] || 0) + 1;
     el.style.transitionDelay = ((groupCount[key] - 1) * 90) + 'ms';
   });
-
   var revealObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
@@ -560,14 +522,11 @@
       }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
   document.querySelectorAll('.reveal').forEach(function (el) {
     revealObserver.observe(el);
   });
-
   /* ── 2. TRUST NUMBERS COUNT-UP ── */
   var counters = document.querySelectorAll('.trust-num');
-
   var animateCount = function (el) {
     var raw = el.textContent.trim();               // contoh: "20+", "4+", "60'"
     var match = raw.match(/^(\d+)(.*)$/);
@@ -576,7 +535,6 @@
     var suffix = match[2] || '';
     var duration = 1200;
     var start = null;
-
     var step = function (ts) {
       if (!start) start = ts;
       var progress = Math.min((ts - start) / duration, 1);
@@ -586,7 +544,6 @@
     };
     requestAnimationFrame(step);
   };
-
   var countObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
@@ -595,10 +552,9 @@
       }
     });
   }, { threshold: 0.6 });
-
   counters.forEach(function (el) { countObserver.observe(el); });
 })();
 </script>
-  
+
 </body>
 </html>
