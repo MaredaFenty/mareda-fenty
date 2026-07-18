@@ -1590,12 +1590,12 @@ details.faq-item summary:hover {
 }
 
 .footer-cta-bg {
-    animation: footerDrift 16s ease-in-out infinite;
+    animation: footerDrift 8s ease-in-out infinite;
 }
 
 @keyframes footerDrift {
-    0%, 100% { transform: translateX(calc(-50% - 20px)); }
-    50%      { transform: translateX(calc(-50% + 20px)); }
+    0%, 100% { transform: translateX(calc(-50% - 28px)); }
+    50%      { transform: translateX(calc(-50% + 28px)); }
 }
 
 @media (prefers-reduced-motion: reduce) {
