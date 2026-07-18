@@ -1589,3 +1589,15 @@ details.faq-item summary:hover {
     .hero-headline .hl-line { opacity: 1; animation: none; }
 }
 
+.footer-cta-bg {
+    animation: footerDrift 16s ease-in-out infinite;
+}
+
+@keyframes footerDrift {
+    0%, 100% { transform: translateX(calc(-50% - 20px)); }
+    50%      { transform: translateX(calc(-50% + 20px)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .footer-cta-bg { animation: none; }
+}
